@@ -1,0 +1,16 @@
+* company-scheme
+
+  #+BEGIN_SRC emacs-lisp
+  (load "company-scheme.el")
+  (add-to-list 'company-backends 'company-scheme)
+
+  (add-hook 'scheme-mode-hook #'turn-on-company-mode)
+  (add-hook 'inferior-scheme-mode-hook #'turn-on-company-mode)
+
+  (define-key scheme-mode-map (kbd "C-c C-/") #'company-complete)
+  (define-key inferior-scheme-mode-map (kbd "C-c C-/") #'company-complete)
+
+  (defun turn-on-company-mode ()
+    (interactive)
+    (company-mode 1))
+  #+END_SRC

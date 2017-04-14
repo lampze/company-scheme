@@ -1,5 +1,0 @@
-company-scheme
---------------
-
-(load "company-scheme.el")
-(add-to-list 'company-backends 'company-scheme)
