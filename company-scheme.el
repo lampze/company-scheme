@@ -8,6 +8,7 @@
   (cl-case command
     (interactive (company-begin-backend 'company-scheme))
     (prefix (and (or (eq major-mode 'scheme-mode)
+                     (eq major-mode 'scheme-interaction-mode)
                      (eq major-mode 'inferior-scheme-mode))
                  (company-grab-symbol)))
     (candidates
