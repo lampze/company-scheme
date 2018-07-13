@@ -1,9 +1,16 @@
-;;; company-scheme.el
+;;; company-scheme.el --- Company backend for scheme-mode -*- lexical-binding: t -*-
+
+;;; Commentary:
+
+;; Backend for company mode to complete scheme-mode
+
+;;; Code:
 
 (require 'cl-lib)
 (require 'company)
 
 (defun company-scheme (command &optional arg &rest ignored)
+  "Company backend for scheme."
   (interactive (list 'interactive))
   (cl-case command
     (interactive (company-begin-backend 'company-scheme))
@@ -2398,3 +2405,7 @@
     "xscheme-yank-previous-send"
     "y-size"
     "zero?"))
+
+(provide 'company-scheme)
+
+;;; company-scheme.el ends here
